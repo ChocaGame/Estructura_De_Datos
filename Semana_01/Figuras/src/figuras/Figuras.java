@@ -92,7 +92,6 @@ public class Figuras implements FigurasInterface{
                 res=JOptionPane.showConfirmDialog(null, "Desea Seguir");
             }
         } while (res==JOptionPane.YES_OPTION);
-        System.out.println("holi");
     }
 
     @Override
