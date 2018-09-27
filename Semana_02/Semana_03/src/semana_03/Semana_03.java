@@ -27,45 +27,52 @@ public class Semana_03 {
         }
         System.out.println("]");
         */
+        
         int nCantidadDatos=0;
-        do {
-            try{
-                nCantidadDatos=Integer.parseInt(JOptionPane.showInputDialog("Ingrese Cantidad de Datos"));
-            }catch(NumberFormatException e){
-                JOptionPane.showMessageDialog(null, "Ingrese nuevamente");
-            }
-        } while (nCantidadDatos<=0);    
-                    
-        int nValorMinimo=0;
-        int nValorMaximo=10000;
-        int a[]=new int [nCantidadDatos];
-        Ordenamiento o=new Ordenamiento ();
-        int[] oArreglo = o.DevuelveArreglo(nCantidadDatos, nValorMinimo, nValorMaximo);
-        //"Metodo Quickshort"
-        long nIniciotiempo= System.currentTimeMillis();
-        Ordenamiento.Quickshort(oArreglo, 0, oArreglo.length - 1);            
-        long nRetardoTiempo = System.currentTimeMillis() - nIniciotiempo;
-        System.out.println("Tiempo Ejecucion: " + nRetardoTiempo);
-        //"Metodo burbuja"
-        long nIniciotiempo1= System.currentTimeMillis();
-        Ordenamiento.Burbuja(oArreglo);
-        long nRetardoTiempo1 = System.currentTimeMillis() - nIniciotiempo1;
-        //"Metodo Shell"
-        long nIniciotiempo2= System.currentTimeMillis();
-        Ordenamiento.Shell(oArreglo);
-        long nRetardoTiempo2 = System.currentTimeMillis() - nIniciotiempo2;
-        //"Metodo Insercion"
-        long nIniciotiempo3= System.currentTimeMillis();
-        Ordenamiento.Insercion(oArreglo);
-        long nRetardoTiempo3 = System.currentTimeMillis() - nIniciotiempo3;
-        JOptionPane.showMessageDialog(null, "Cantidad de Registro:  " + nCantidadDatos  + " \n"
-            + " \n"
-            + "Metodo                  |"+"     Tiempo de ordenamiento \n" 
-            + "------------------------------------------------------------------- \n"
-            + "Burbuja                  |                         "+ nRetardoTiempo1+" \n"
-            + "Shell                       |                         "+nRetardoTiempo2 + " \n"
-            + "Quickshort           |                         "+nRetardoTiempo+ " \n"
-            + "Inserccion            |                         "+nRetardoTiempo3 );
+        JOptionPane.showConfirmDialog(null, "Desea iniciar el programa");
+        if (JOptionPane.YES_OPTION==0) {
+            do {
+                try{
+                    nCantidadDatos=Integer.parseInt(JOptionPane.showInputDialog("Ingrese Cantidad de Datos"));
+                }catch(NumberFormatException e){
+                    JOptionPane.showMessageDialog(null, "Ingrese nuevamente");
+                }
+            } while (nCantidadDatos<=0);    
+
+            int nValorMinimo=0;
+            int nValorMaximo=10000;
+            int a[]=new int [nCantidadDatos];
+            Ordenamiento o=new Ordenamiento ();
+            int[] oArreglo = o.DevuelveArreglo(nCantidadDatos, nValorMinimo, nValorMaximo);
+            //"Metodo Quickshort"
+            long nIniciotiempo= System.currentTimeMillis();
+            Ordenamiento.Quickshort(oArreglo, 0, oArreglo.length - 1);            
+            long nRetardoTiempo = System.currentTimeMillis() - nIniciotiempo;
+            System.out.println("Tiempo Ejecucion: " + nRetardoTiempo);
+            //"Metodo burbuja"
+            long nIniciotiempo1= System.currentTimeMillis();
+            Ordenamiento.Burbuja(oArreglo);
+            long nRetardoTiempo1 = System.currentTimeMillis() - nIniciotiempo1;
+            //"Metodo Shell"
+            long nIniciotiempo2= System.currentTimeMillis();
+            Ordenamiento.Shell(oArreglo);
+            long nRetardoTiempo2 = System.currentTimeMillis() - nIniciotiempo2;
+            //"Metodo Insercion"
+            long nIniciotiempo3= System.currentTimeMillis();
+            Ordenamiento.Insercion(oArreglo);
+            long nRetardoTiempo3 = System.currentTimeMillis() - nIniciotiempo3;
+            JOptionPane.showMessageDialog(null, "Cantidad de Registro:  " + nCantidadDatos  + " \n"
+                + " \n"
+                + "Metodo                  |"+"     Tiempo de ordenamiento \n" 
+                + "------------------------------------------------------------------- \n"
+                + "Burbuja                  |                         "+ nRetardoTiempo1+" \n"
+                + "Shell                       |                         "+nRetardoTiempo2 + " \n"
+                + "Quickshort           |                         "+nRetardoTiempo+ " \n"
+                + "Inserccion            |                         "+nRetardoTiempo3 );
+        }else{
+            JOptionPane.showMessageDialog(null, " Gracias ");
+        }
+            
 
         /*
         System.out.println("");   
