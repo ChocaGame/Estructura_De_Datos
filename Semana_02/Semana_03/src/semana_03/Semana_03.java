@@ -48,7 +48,6 @@ public class Semana_03 {
             long nIniciotiempo= System.currentTimeMillis();
             Ordenamiento.Quickshort(oArreglo, 0, oArreglo.length - 1);            
             long nRetardoTiempo = System.currentTimeMillis() - nIniciotiempo;
-            System.out.println("Tiempo Ejecucion: " + nRetardoTiempo);
             //"Metodo burbuja"
             long nIniciotiempo1= System.currentTimeMillis();
             Ordenamiento.Burbuja(oArreglo);
