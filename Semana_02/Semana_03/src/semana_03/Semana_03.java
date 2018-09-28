@@ -25,9 +25,7 @@ public class Semana_03 {
         for (int i = 0; i < 10; i++) {
             System.out.print(a[i] + " ");
         }
-        System.out.println("]");
-        */
-        
+        System.out.println("]");       */        
         int nCantidadDatos=0;
         JOptionPane.showConfirmDialog(null, "Desea iniciar el programa");
         if (JOptionPane.YES_OPTION==0) {
@@ -68,25 +66,26 @@ public class Semana_03 {
                 + "Shell                       |                         "+nRetardoTiempo2 + " \n"
                 + "Quickshort           |                         "+nRetardoTiempo+ " \n"
                 + "Inserccion            |                         "+nRetardoTiempo3 );
+            System.out.println("");   
+            System.out.println("Metodo Burbuja");
+            long nIniciotiempo5= System.currentTimeMillis();
+            Ordenamiento.Burbuja(oArreglo);
+            long nRetardoTiempo5 = System.currentTimeMillis() - nIniciotiempo5;
+            System.out.println("Arreglo Ordenado");
+            for (int n: oArreglo) {
+
+                System.out.print(" "+n);
+            }
+            System.out.println("");
+            System.out.println("Tiempo Ejecucion "+nRetardoTiempo5);
         }else{
             JOptionPane.showMessageDialog(null, " Gracias ");
         }
             
 
-        /*
-        System.out.println("");   
-        System.out.println("Metodo Burbuja");
-        long nIniciotiempo1= System.currentTimeMillis();
-        Ordenamiento.Burbuja(oArreglo);
-        long nRetardoTiempo1 = System.currentTimeMillis() - nIniciotiempo1;
-        System.out.println("Arreglo Ordenado");
-        for (int n: oArreglo) {
-
-            System.out.print(" "+n);
-        }
-        System.out.println("");
-        System.out.println("Tiempo Ejecucion "+nRetardoTiempo1);
-        */    
+        
+        
+          
     }
     
 }
