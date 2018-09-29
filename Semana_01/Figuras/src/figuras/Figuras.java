@@ -91,6 +91,7 @@ public class Figuras implements FigurasInterface{
                 }
                 res=JOptionPane.showConfirmDialog(null, "Desea Seguir");
             }
+            op=0;
         } while (res==JOptionPane.YES_OPTION);
     }
 
