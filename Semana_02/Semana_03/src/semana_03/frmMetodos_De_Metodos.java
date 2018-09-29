@@ -122,7 +122,7 @@ public class frmMetodos_De_Metodos extends javax.swing.JFrame {
                 break;
         }
         int nValorMinimo=0;
-        int nValorMaximo=10000;
+        int nValorMaximo=1000000;
         int a[]=new int [nCantidadDatos];
         Ordenamiento o=new Ordenamiento ();
         int[] oArreglo = o.DevuelveArreglo(nCantidadDatos, nValorMinimo, nValorMaximo);

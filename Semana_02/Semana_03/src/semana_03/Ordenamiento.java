@@ -25,40 +25,33 @@ public class Ordenamiento {
         return nValorDevuelto;
     }    
     
-    public static void Quickshort (int a[], int izquierda, int derecha){
-        int pivote = 0,i ,j=0, auxintercambio;
-        pivote = a[izquierda];
-        i=izquierda;
-        j=derecha;
-        auxintercambio=0;
-        
-        while(i<j){
-            while(a[i]<=pivote && i<j){
-                i++;
-            }
-            while(a[j]>pivote){
-                j--;
-            }
-            if (i<j) {
-                auxintercambio=a[i];
-                a[i]=a[j];
-                a[j]=auxintercambio;               
-            }
-            
-        }
-        a[izquierda]=a[j];
-        a[j]=pivote;
-        if (izquierda<j-1) {
-            Quickshort(a,izquierda,j-1);
-        }
-        if (j+1<derecha) {
-            Quickshort(a,j+1,derecha);
-        }
+    public static void Quickshort (int A[], int izq, int der){
+              
+        int pivote=A[izq]; // tomamos primer elemento como pivote
+        int i=izq; // i realiza la búsqueda de izquierda a derecha
+        int j=der; // j realiza la búsqueda de derecha a izquierda
+        int aux;
+
+        while(i<j){            // mientras no se crucen las búsquedas
+           while(A[i]<=pivote && i<j) i++; // busca elemento mayor que pivote
+           while(A[j]>pivote) j--;         // busca elemento menor que pivote
+           if (i<j) {                      // si no se han cruzado                      
+               aux= A[i];                  // los intercambia
+               A[i]=A[j];
+               A[j]=aux;
+           }
+         }
+         A[izq]=A[j]; // se coloca el pivote en su lugar de forma que tendremos
+         A[j]=pivote; // los menores a su izquierda y los mayores a su derecha
+         if(izq<j-1)
+            Quickshort(A,izq,j-1); // ordenamos subarray izquierdo
+         if(j+1 <der)
+            Quickshort(A,j+1,der); // ordenamos subarray derecho
     }
     
     public static void Burbuja (int a[]){
         
-        for(int i = 0; i < a.length; i++)
+        for(int i = 0; i < a.length - 1; i++)
         {
             for(int j = 0; j < a.length - 1; j++)
             {
