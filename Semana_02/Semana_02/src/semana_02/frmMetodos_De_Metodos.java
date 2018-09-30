@@ -1,6 +1,6 @@
-package semana_03;
+package semana_02;
 
-import semana_03.Ordenamiento;
+import semana_02.Ordenamiento;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
