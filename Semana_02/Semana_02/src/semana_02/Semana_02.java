@@ -10,7 +10,7 @@ import java.io.*;
  *
  * @author hp
  */
-public class Semana_03 {
+public class Semana_02 {
 
     /**
      * @param args the command line arguments
